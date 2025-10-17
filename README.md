@@ -24,9 +24,9 @@
 | <img src="img/blendedmvs.png" width="300"> | [Blendedmvs: A large-scale dataset for generalized multi-view stereo networks](http://openaccess.thecvf.com/content_CVPR_2020/html/Yao_BlendedMVS_A_Large-Scale_Dataset_for_Generalized_Multi-View_Stereo_Networks_CVPR_2020_paper.html) |   CVPR 2020   |    [Project](https://github.com/YoYo000/BlendedMVS)     |
 |  <img src="img/ABC-NEF.png" width="300">   | [Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images](http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html) |   CVPR 2023   |      [Project](https://yunfan1202.github.io/NEF/)       |
 
-### 基于网格的三维线框生成方法
+### 一、基于网格的三维线框生成方法
 
-#### 基于曲率估计的谷脊线检测
+#### 1.1 基于曲率估计的谷脊线检测
 
 1. [Solid shape](https://mitpress.mit.edu/9780262111393/)
 2. [Ridge curves and shape analysis](https://www.bmva-archive.org.uk/bmvc/1996/kent_1.pdf)
@@ -53,7 +53,7 @@
 23. [Learning line features in 3D geometry](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2011.01858.x)
 24. [Feature curve co-completion in noisy data](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13337)
 
-#### 基于网格分割的特征曲线检测
+#### 1.2 基于网格分割的特征曲线检测
 
 1. [A general and efficient method for finding cycles in 3D curve networks](https://dl.acm.org/doi/10.1145/2508363.2508423)
 2. [Flow aligned surfacing of curve networks](https://dl.acm.org/doi/10.1145/2766990)
@@ -87,10 +87,61 @@
 30. [Patch layout from feature graphs](https://www.sciencedirect.com/science/article/pii/S0010448509002851)
 31. [Extract feature curves on noisy triangular meshes](https://www.sciencedirect.com/science/article/pii/S1524070317300498)
 
-### 基于点云的三维线框生成方法
+### 二、基于点云的三维线框生成方法
 
-#### 基于几何分析的尖锐特征检测
+#### 2.1 基于几何分析的尖锐特征检测
 
+1. [Feature Extraction From Point Clouds](https://www.researchgate.net/profile/Stefan-Gumhold/publication/2554207_Feature_Extraction_from_Point_Clouds/links/0deec522ee1463f801000000/Feature-Extraction-from-Point-Clouds.pdf)
+2. [Multi‐scale feature extraction on point‐sampled surfaces](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-8659.00675)
+3. [Spline-based feature curves from point-sampled geometry](https://link.springer.com/article/10.1007/s00371-008-0223-2)
+4. [Feature preserving mesh generation from 3D point clouds](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2010.01771.x)
+5. [Sharp feature preserving MLS surface reconstruction based on local feature line approximations](https://www.sciencedirect.com/science/article/pii/S152407031200032X)
+6. [Sharp feature detection in point clouds](https://ieeexplore.ieee.org/abstract/document/5521460/)
+7. [Fast and robust edge extraction in unorganized point clouds](https://ieeexplore.ieee.org/abstract/document/7371262/)
+8. [Feature‐preserving reconstruction of singular surfaces](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2012.03183.x)
+9. [Robust moving least-squares fitting with sharp features](https://dl.acm.org/doi/abs/10.1145/1073204.1073227)
+10. [Data-dependent MLS for faithful surface approximation](https://dl.acm.org/doi/abs/10.5555/1281991.1281999)
+11. [Voronoi-based feature curves extraction for sampled singular surfaces](https://www.sciencedirect.com/science/article/pii/S0097849313000885)
+12. [Patch-graph reconstruction for piecewise smooth surfaces](https://www.google.com/books?hl=zh-CN&lr=&id=WCVFWYlAeCMC&oi=fnd&pg=PA3&dq=Patch-graph+reconstruction+for+piecewise+smooth+surfaces&ots=QDKiVh40M-&sig=J6VqqWfIGI9zdC067UGE6uCBfrs)
+13. [Feature preserving point set surfaces based on non‐linear kernel regression](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2009.01388.x)
+14. [Multi-scale tensor voting for feature extraction from unstructured point clouds](https://www.sciencedirect.com/science/article/pii/S1524070312000288)
+15. [A feature-preserving framework for point cloud denoising](https://www.sciencedirect.com/science/article/pii/S0010448520300506)
+16. [Voronoi-based curvature and feature estimation from point clouds](https://ieeexplore.ieee.org/abstract/document/5669298/)
+17. [SGLBP: Subgraph‐based local binary patterns for feature extraction on point clouds](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14500)
+18. [Extracting feature lines from point clouds based on smooth shrink and iterative thinning](https://www.sciencedirect.com/science/article/pii/S1524070316300054)
+19. [Neighbor reweighted local centroid for geometric feature identification](https://ieeexplore.ieee.org/abstract/document/9600876/)
+20. [An adaptive normal estimation method for scanned point clouds with sharp features](https://www.sciencedirect.com/science/article/pii/S0010448513001000)
+21. [A statistical approach for extraction of feature lines from point clouds](https://www.sciencedirect.com/science/article/pii/S0097849316300097)
+22. [Edge and corner detection for unorganized 3d point clouds with application to robotic welding](https://ieeexplore.ieee.org/abstract/document/8593910/)
+23. [Multiscale feature line extraction from raw point clouds based on local surface variation and anisotropic contraction](https://ieeexplore.ieee.org/abstract/document/9351738/)
+24. [Rfeps: Reconstructing feature-line equipped polygonal surface](https://dl.acm.org/doi/abs/10.1145/3550454.3555443)
 
+#### 2.2 基于深度学习的CAD模型三维线框生成
 
-#### 基于深度学习的CAD模型三维线框生成
+1. [Contour detection in unstructured 3D point clouds](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Hackel_Contour_Detection_in_CVPR_2016_paper.html)
+2. [Edge-aware point set resampling](https://dl.acm.org/doi/abs/10.1145/2421636.2421645)
+3. [Ec-net: an edge-aware point set consolidation network](http://openaccess.thecvf.com/content_ECCV_2018/html/Lequan_Yu_EC-Net_an_Edge-aware_ECCV_2018_paper.html)
+4. [Learning part boundaries from 3D point clouds](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14078)
+5. [Def: Deep estimation of sharp geometric features in 3d shapes](https://par.nsf.gov/biblio/10357187)
+6. [MSL-Net: Sharp feature detection network for 3D point clouds](https://ieeexplore.ieee.org/abstract/document/10373950/)
+7. [Complexgen: Cad reconstruction by b-rep chain complex generation](https://dl.acm.org/doi/abs/10.1145/3528223.3530078)
+8. [Surface and edge detection for primitive fitting of point clouds](https://dl.acm.org/doi/abs/10.1145/3588432.3591522)
+9. [Brepgen: A b-rep generative diffusion model with structured latent geometry](https://dl.acm.org/doi/abs/10.1145/3658129)
+10. [Split-and-fit: Learning b-reps via structure-aware voronoi partitioning](https://dl.acm.org/doi/abs/10.1145/3658155)
+11. [Hola: B-rep generation using a holistic latent representation](https://dl.acm.org/doi/abs/10.1145/3730842)
+12. [Sharp feature consolidation from raw 3D point clouds via displacement learning](https://www.sciencedirect.com/science/article/pii/S0167839623000365)
+13. [Sepicnet: Sharp edges recovery by parametric inference of curves in 3d shapes](https://openaccess.thecvf.com/content/CVPR2023W/StruCo3D/html/Cherenkova_SepicNet_Sharp_Edges_Recovery_by_Parametric_Inference_of_Curves_in_CVPRW_2023_paper.html)
+14. [Thin-walled aircraft panel edge extraction from 3-D measurement surfaces via feature-aware displacement learning](https://ieeexplore.ieee.org/abstract/document/10458949/)
+15. [STAR-Edge: Structure-aware Local Spherical Curve Representation for Thin-walled Edge Extraction from Unstructured Point Clouds](https://openaccess.thecvf.com/content/CVPR2025/html/Li_STAR-Edge_Structure-aware_Local_Spherical_Curve_Representation_for_Thin-walled_Edge_Extraction_CVPR_2025_paper.html)
+16. [Sketch2cad: Sequential cad modeling by sketching in context](https://dl.acm.org/doi/abs/10.1145/3414685.3417807)
+17. [Free2cad: Parsing freehand drawings into cad commands](https://dl.acm.org/doi/abs/10.1145/3528223.3530133)
+18. [Pie-net: Parametric inference of point cloud edges](https://proceedings.neurips.cc/paper/2020/hash/e94550c93cd70fe748e6982b3439ad3b-Abstract.html)
+19. [Pc2wf: 3d wireframe reconstruction from raw point clouds](https://arxiv.org/abs/2103.02766)
+20. [Coarse-to-fine pipeline for 3D wireframe reconstruction from point cloud](https://www.sciencedirect.com/science/article/pii/S0097849322001194)
+21. [WireframeNet: A novel method for wireframe generation from point cloud](https://www.sciencedirect.com/science/article/pii/S0097849323001449)
+22. [EDWG: Efficient Edge Detection and Wireframe Generation from Point Clouds](https://ieeexplore.ieee.org/abstract/document/11005571/)
+23. [Nerve: Neural volumetric edges for parametric curve extraction from point cloud](http://openaccess.thecvf.com/content/CVPR2023/html/Zhu_NerVE_Neural_Volumetric_Edges_for_Parametric_Curve_Extraction_From_Point_CVPR_2023_paper.html)
+24. [Deep Point Cloud Edge Reconstruction Via Surface Patch Segmentation](https://ieeexplore.ieee.org/abstract/document/10909144/)
+25. [Generating 3D House Wireframes with Semantics](https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13)
+26. [Clr-wire: Towards continuous latent representations for 3d curve wireframe generation](https://dl.acm.org/doi/abs/10.1145/3721238.3730638)
+
