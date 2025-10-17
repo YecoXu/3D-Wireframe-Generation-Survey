@@ -11,7 +11,7 @@
 | <img src="img/pointnet.png" width="300">  | [Pointnet: Deep learning on point sets for 3d classification and segmentation](http://openaccess.thecvf.com/content_cvpr_2017/html/Qi_PointNet_Deep_Learning_CVPR_2017_paper.html) |   CVPR 2017   |     [Code](https://github.com/charlesq34/pointnet)     |
 | <img src="img/pointnet2.jpg" width="300"> | [Pointnet++: Deep hierarchical feature learning on point sets in a metric space](https://proceedings.neurips.cc/paper/2017/hash/d8bf84be3800d12f74d8b05e9b89836f-Abstract.html) |   NIPS 2017   |    [Code](https://github.com/charlesq34/pointnet2)     |
 |   <img src="img/DGCNN.png" width="300">   | [Dynamic graph cnn for learning on point clouds](https://dl.acm.org/doi/abs/10.1145/3326362) |   TOG 2019    | [Code](https://github.com/WangYueFt/dgcnn/tree/master) |
-| <img src="img/pointcept.png" width="300"> | Pointcept                                                    |   Codebase    |     [Code](https://github.com/Pointcept/Pointcept)     |
+| <img src="img/pointcept.png" width="300"> | [Pointcept](https://github.com/Pointcept/Pointcept)          |   Codebase    |     [Code](https://github.com/Pointcept/Pointcept)     |
 
 ### 常用数据集
 
@@ -178,3 +178,38 @@
 8. [PBWR: Parametric-building-wireframe reconstruction from aerial LiDAR point clouds](https://openaccess.thecvf.com/content/CVPR2024/html/Huang_PBWR_Parametric-Building-Wireframe_Reconstruction_from_Aerial_LiDAR_Point_Clouds_CVPR_2024_paper.html)
 9. [BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html)
 10. [EdgeDiff: Edge-aware Diffusion Network for Building Reconstruction from Point Clouds](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_EdgeDiff_Edge-aware_Diffusion_Network_for_Building_Reconstruction_from_Point_Clouds_CVPR_2025_paper.html)
+
+### 三、基于图像的三维线框生成方法
+
+#### 3.1 基于结构光恢复的三维线段检测
+
+1. [Structure-from-motion using lines: Representation, triangulation, and bundle adjustment](https://www.sciencedirect.com/science/article/pii/S1077314205000846)
+2. [Exploiting global connectivity constraints for reconstruction of 3D line segments from images](https://ieeexplore.ieee.org/abstract/document/5539781/)
+3. [Line-based 3D reconstruction of wiry objects](https://graz.elsevierpure.com/en/publications/line-based-3d-reconstruction-of-wiry-objects)
+4. [Incremental Line-based 3D Reconstruction using Geometric Constraints](https://graz.elsevierpure.com/files/87144577/hofer_bmvc2013.pdf)
+5. [Semi-Global 3D Line Modeling for Incremental Structure-from-Motion](https://www.researchgate.net/profile/Manuel-Hofer-4/publication/266139858_Semi-Global_3D_Line_Modeling_for_Incremental_Structure-from-Motion/links/54267b020cf238c6ea779465/Semi-Global-3D-Line-Modeling-for-Incremental-Structure-from-Motion.pdf)
+6. [Improving sparse 3D models for man-made environments using line-based 3D reconstruction](https://ieeexplore.ieee.org/abstract/document/7035867/)
+7. [Efficient 3D scene abstraction using line segments](https://www.sciencedirect.com/science/article/pii/S1077314216300236)
+8. [ELSR: Efficient line segment reconstruction with planes and points guidance](http://openaccess.thecvf.com/content/CVPR2022/html/Wei_ELSR_Efficient_Line_Segment_Reconstruction_With_Planes_and_Points_Guidance_CVPR_2022_paper.html)
+
+#### 3.2 基于多视图立体视觉的三维线段生成
+
+1. [Structure and motion from line segments in multiple images](https://ieeexplore.ieee.org/abstract/document/473228/)
+2. [Matching, reconstructing and grouping 3d lines from multiple views using uncertain projective geometry](https://ieeexplore.ieee.org/abstract/document/991006/)
+3. [Multi-view stereo 3D edge reconstruction](https://ieeexplore.ieee.org/abstract/document/8354204/)
+4. [SOLD2: Self-supervised occlusion-aware line description and detection](http://openaccess.thecvf.com/content/CVPR2021/html/Pautrat_SOLD2_Self-Supervised_Occlusion-Aware_Line_Description_and_Detection_CVPR_2021_paper.html)
+5. [Deeplsd: Line segment detection and refinement with deep image gradients](http://openaccess.thecvf.com/content/CVPR2023/html/Pautrat_DeepLSD_Line_Segment_Detection_and_Refinement_With_Deep_Image_Gradients_CVPR_2023_paper.html)
+6. [3d line mapping revisited](http://openaccess.thecvf.com/content/CVPR2023/html/Liu_3D_Line_Mapping_Revisited_CVPR_2023_paper.html)
+7. [Mv2cyl: Reconstructing 3d extrusion cylinders from multi-view images](https://proceedings.neurips.cc/paper_files/paper/2024/hash/35d127a008e3ea420dd1775d1e3ed5b4-Abstract-Conference.html)
+8. [3D curve sketch: Flexible curve-based stereo reconstruction and calibration](https://ieeexplore.ieee.org/abstract/document/5539787/)
+9. [3D Edge Sketch from Multiview Images](https://ieeexplore.ieee.org/abstract/document/10943943/)
+
+#### 3.3 基于可微渲染的三维线框生成
+
+1. [Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images](http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html)
+2. [3D wireframe model reconstruction of buildings from multi-view images using neural implicit fields](https://www.sciencedirect.com/science/article/pii/S0926580525001852)
+3. [Neat: Distilling 3d wireframes from neural attraction fields](http://openaccess.thecvf.com/content/CVPR2024/html/Xue_NEAT_Distilling_3D_Wireframes_from_Neural_Attraction_Fields_CVPR_2024_paper.html)
+4. [3d neural edge reconstruction](http://openaccess.thecvf.com/content/CVPR2024/html/Li_3D_Neural_Edge_Reconstruction_CVPR_2024_paper.html)
+5. [EdgeGaussians-3D Edge Mapping via Gaussian Splatting](https://ieeexplore.ieee.org/abstract/document/10943309/)
+6. [Curve-Aware Gaussian Splatting for 3D Parametric Curve Reconstruction](https://arxiv.org/abs/2506.21401)
+7. [SGCR: Spherical Gaussians for Efficient 3D Curve Reconstruction](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_SGCR_Spherical_Gaussians_for_Efficient_3D_Curve_Reconstruction_CVPR_2025_paper.html)
