@@ -4,25 +4,65 @@
 
 
 
-### 常用的点云特征提取backbone
+## 常用的点云特征提取backbone
 
-|                   预览                    | 论文名称                                                     | 发表期刊/会议 |                        相关链接                        |
-| :---------------------------------------: | :----------------------------------------------------------- | :-----------: | :----------------------------------------------------: |
-| <img src="img/pointnet.png" width="300">  | [Pointnet: Deep learning on point sets for 3d classification and segmentation](http://openaccess.thecvf.com/content_cvpr_2017/html/Qi_PointNet_Deep_Learning_CVPR_2017_paper.html) |   CVPR 2017   |     [Code](https://github.com/charlesq34/pointnet)     |
-| <img src="img/pointnet2.jpg" width="300"> | [Pointnet++: Deep hierarchical feature learning on point sets in a metric space](https://proceedings.neurips.cc/paper/2017/hash/d8bf84be3800d12f74d8b05e9b89836f-Abstract.html) |   NIPS 2017   |    [Code](https://github.com/charlesq34/pointnet2)     |
-|   <img src="img/DGCNN.png" width="300">   | [Dynamic graph cnn for learning on point clouds](https://dl.acm.org/doi/abs/10.1145/3326362) |   TOG 2019    | [Code](https://github.com/WangYueFt/dgcnn/tree/master) |
-| <img src="img/pointcept.png" width="300"> | [Pointcept](https://github.com/Pointcept/Pointcept)          |   Codebase    |     [Code](https://github.com/Pointcept/Pointcept)     |
+|                   预览                    | 论文名称                                                     |                        相关链接                        |
+| :---------------------------------------: | :----------------------------------------------------------- | :----------------------------------------------------: |
+| <img src="img/pointnet.png" width="300">  | [Pointnet: Deep learning on point sets for 3d classification and segmentation](http://openaccess.thecvf.com/content_cvpr_2017/html/Qi_PointNet_Deep_Learning_CVPR_2017_paper.html) |     [Code](https://github.com/charlesq34/pointnet)     |
+| <img src="img/pointnet2.jpg" width="300"> | [Pointnet++: Deep hierarchical feature learning on point sets in a metric space](https://proceedings.neurips.cc/paper/2017/hash/d8bf84be3800d12f74d8b05e9b89836f-Abstract.html) |    [Code](https://github.com/charlesq34/pointnet2)     |
+|   <img src="img/DGCNN.png" width="300">   | [Dynamic graph cnn for learning on point clouds](https://dl.acm.org/doi/abs/10.1145/3326362) | [Code](https://github.com/WangYueFt/dgcnn/tree/master) |
+| <img src="img/pointcept.png" width="300"> | [Pointcept](https://github.com/Pointcept/Pointcept)          |     [Code](https://github.com/Pointcept/Pointcept)     |
 
-### 常用数据集
+## 常用数据集
 
-|                    预览                    | 论文名称                                                     | 发表期刊/会议 |                        相关链接                         |
-| :----------------------------------------: | :----------------------------------------------------------- | :-----------: | :-----------------------------------------------------: |
-|    <img src="img/ABC.png" width="300">     | [Abc: A big cad model dataset for geometric deep learning](http://openaccess.thecvf.com/content_CVPR_2019/html/Koch_ABC_A_Big_CAD_Model_Dataset_for_Geometric_Deep_Learning_CVPR_2019_paper.html) |   CVPR 2019   | [Project](https://deep-geometry.github.io/abc-dataset/) |
-| <img src="img/Building3D.png" width="300"> | [Building3d: A urban-scale dataset and benchmarks for learning roof structures from point clouds](http://openaccess.thecvf.com/content/ICCV2023/html/Wang_Building3D_A_Urban-Scale_Dataset_and_Benchmarks_for_Learning_Roof_Structures_ICCV_2023_paper.html) |   ICCV 2023   |       [Project](https://building3d.ucalgary.ca/)        |
-| <img src="img/Semantic3d.png" width="300"> | [Semantic3d. net: A new large-scale point cloud classification benchmark](https://arxiv.org/abs/1704.03847) |  arXiv 2017   |                [Project](semantic3d.net)                |
-|    <img src="img/DTU.png" width="300">     | [Large-scale data for multiple-view stereopsis](https://link.springer.com/article/10.1007/s11263-016-0902-9) |   IJCV 2016   |    [Project](https://roboimagedata.compute.dtu.dk/)     |
-| <img src="img/blendedmvs.png" width="300"> | [Blendedmvs: A large-scale dataset for generalized multi-view stereo networks](http://openaccess.thecvf.com/content_CVPR_2020/html/Yao_BlendedMVS_A_Large-Scale_Dataset_for_Generalized_Multi-View_Stereo_Networks_CVPR_2020_paper.html) |   CVPR 2020   |    [Project](https://github.com/YoYo000/BlendedMVS)     |
-|  <img src="img/ABC-NEF.png" width="300">   | [Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images](http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html) |   CVPR 2023   |      [Project](https://yunfan1202.github.io/NEF/)       |
+|                    预览                    | 论文名称                                                     |                        相关链接                         |
+| :----------------------------------------: | :----------------------------------------------------------- | :-----------------------------------------------------: |
+|    <img src="img/ABC.png" width="300">     | [Abc: A big cad model dataset for geometric deep learning](http://openaccess.thecvf.com/content_CVPR_2019/html/Koch_ABC_A_Big_CAD_Model_Dataset_for_Geometric_Deep_Learning_CVPR_2019_paper.html) | [Project](https://deep-geometry.github.io/abc-dataset/) |
+| <img src="img/Building3D.png" width="300"> | [Building3d: A urban-scale dataset and benchmarks for learning roof structures from point clouds](http://openaccess.thecvf.com/content/ICCV2023/html/Wang_Building3D_A_Urban-Scale_Dataset_and_Benchmarks_for_Learning_Roof_Structures_ICCV_2023_paper.html) |       [Project](https://building3d.ucalgary.ca/)        |
+| <img src="img/Semantic3d.png" width="300"> | [Semantic3d. net: A new large-scale point cloud classification benchmark](https://arxiv.org/abs/1704.03847) |                [Project](semantic3d.net)                |
+|    <img src="img/DTU.png" width="300">     | [Large-scale data for multiple-view stereopsis](https://link.springer.com/article/10.1007/s11263-016-0902-9) |    [Project](https://roboimagedata.compute.dtu.dk/)     |
+| <img src="img/blendedmvs.png" width="300"> | [Blendedmvs: A large-scale dataset for generalized multi-view stereo networks](http://openaccess.thecvf.com/content_CVPR_2020/html/Yao_BlendedMVS_A_Large-Scale_Dataset_for_Generalized_Multi-View_Stereo_Networks_CVPR_2020_paper.html) |    [Project](https://github.com/YoYo000/BlendedMVS)     |
+|  <img src="img/ABC-NEF.png" width="300">   | [Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images](http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html) |      [Project](https://yunfan1202.github.io/NEF/)       |
+
+
+
+## 部分技术和算法源代码
+
+|                      预览                      | 论文名称                                                     |                           相关链接                           |
+| :--------------------------------------------: | :----------------------------------------------------------- | :----------------------------------------------------------: |
+|      <img src="img/FREE.png" width="300">      | [Fast and robust edge extraction in unorganized point clouds](https://ieeexplore.ieee.org/abstract/document/7371262/) |   [Code](https://github.com/denabazazian/Edge_Extraction)    |
+|      <img src="img/VCM.png" width="300">       | [Voronoi-based feature curves extraction for sampled singular surfaces](https://www.sciencedirect.com/science/article/pii/S0097849313000885) | [Code](https://doc.cgal.org/latest/Point_set_processing_3/group__PkgPointSetProcessing3Algorithms.html#gaf1e415a68652535215c60bc52ebacca3) |
+|      <img src="img/EAR.png" width="300">       | [Edge-aware point set resampling](https://dl.acm.org/doi/abs/10.1145/2421636.2421645) | [Code](https://doc.cgal.org/4.11/Point_set_processing_3/Point_set_processing_3_2edge_aware_upsample_point_set_example_8cpp-example.html) |
+|      <img src="img/MFLE.png" width="300">      | [Multiscale feature line extraction from raw point clouds based on local surface variation and anisotropic contraction](https://ieeexplore.ieee.org/abstract/document/9351738/) | [Code](https://github.com/chenhonghua/Feature-line-extraction) |
+|     <img src="img/RFEPS.png" width="300">      | [Rfeps: Reconstructing feature-line equipped polygonal surface](https://dl.acm.org/doi/abs/10.1145/3550454.3555443) |           [Code](https://github.com/Xrvitd/RFEPS)            |
+|     <img src="img/EC-Net.png" width="300">     | [Ec-net: an edge-aware point set consolidation network](http://openaccess.thecvf.com/content_ECCV_2018/html/Lequan_Yu_EC-Net_an_Edge-aware_ECCV_2018_paper.html) |          [Code](https://github.com/yulequan/EC-Net)          |
+|      <img src="img/DEF.png" width="300">       | [Def: Deep estimation of sharp geometric features in 3d shapes](https://dl.acm.org/doi/abs/10.1145/3528223.3530140) |           [Code](https://github.com/artonson/def)            |
+|    <img src="img/MSL-NET.png" width="300">     | [MSL-Net: Sharp feature detection network for 3D point clouds](https://ieeexplore.ieee.org/abstract/document/10373950/) | [Code](https://github.com/XianheJiao/Sharp-feature-detection-in-point-cloud-) |
+|   <img src="img/complexgen.png" width="300">   | [Complexgen: Cad reconstruction by b-rep chain complex generation](https://dl.acm.org/doi/abs/10.1145/3528223.3530078) |      [Code](https://github.com/guohaoxiang/ComplexGen)       |
+|      <img src="img/SED.png" width="300">       | [Surface and edge detection for primitive fitting of point clouds](https://dl.acm.org/doi/abs/10.1145/3588432.3591522) |        [Code](https://github.com/yuanqili78/SED-Net)         |
+|    <img src="img/brepgen.png" width="300">     | [Brepgen: A b-rep generative diffusion model with structured latent geometry](https://dl.acm.org/doi/abs/10.1145/3658129) |        [Code](https://github.com/samxuxiang/BrepGen)         |
+| <img src="img/split-and-fit.png" width="300">  | [Split-and-fit: Learning b-reps via structure-aware voronoi partitioning](https://dl.acm.org/doi/abs/10.1145/3658155) |         [Code](https://github.com/yilinliu77/NVDNet)         |
+|      <img src="img/SFC.png" width="300">       | [Sharp feature consolidation from raw 3D point clouds via displacement learning](https://www.sciencedirect.com/science/article/pii/S0167839623000365) |         [Code](https://github.com/Tong-ZHAO/SFCNet)          |
+|   <img src="img/STAR-edge.png" width="300">    | [STAR-Edge: Structure-aware Local Spherical Curve Representation for Thin-walled Edge Extraction from Unstructured Point Clouds](https://openaccess.thecvf.com/content/CVPR2025/html/Li_STAR-Edge_Structure-aware_Local_Spherical_Curve_Representation_for_Thin-walled_Edge_Extraction_CVPR_2025_paper.html) |       [Code](https://github.com/Miraclelzk/STAR-Edge)        |
+|      <img src="img/PIE.png" width="300">       | [Pie-net: Parametric inference of point cloud edges](https://proceedings.neurips.cc/paper/2020/hash/e94550c93cd70fe748e6982b3439ad3b-Abstract.html) |      [Code](https://github.com/wangxiaogang866/PIE-NET)      |
+|     <img src="img/pc2wf.png" width="300">      | [Pc2wf: 3d wireframe reconstruction from raw point clouds](https://arxiv.org/abs/2103.02766) |         [Code](https://github.com/YujiaLiu76/PC2WF)          |
+|     <img src="img/nerve.png" width="300">      | [Nerve: Neural volumetric edges for parametric curve extraction from point cloud](http://openaccess.thecvf.com/content/CVPR2023/html/Zhu_NerVE_Neural_Volumetric_Edges_for_Parametric_Curve_Extraction_From_Point_CVPR_2023_paper.html) |           [Code](https://github.com/uhzoaix/NerVE)           |
+|    <img src="img/PCER-Net.png" width="300">    | [Deep Point Cloud Edge Reconstruction Via Surface Patch Segmentation](https://ieeexplore.ieee.org/abstract/document/10909144/) |         [Code](https://github.com/JAJASONW/PCER-Net)         |
+|     <img src="img/3dwire.png" width="300">     | [Generating 3D House Wireframes with Semantics](https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13) |     [Code](https://github.com/3d-house-wireframe/3dwire)     |
+|    <img src="img/clrwire.png" width="300">     | [Clr-wire: Towards continuous latent representations for 3d curve wireframe generation](https://dl.acm.org/doi/abs/10.1145/3721238.3730638) |         [Code](https://github.com/qixuema/CLR-Wire)          |
+|      <img src="img/RAFD.png" width="300">      | [Robust and accurate feature detection on point clouds](https://www.sciencedirect.com/science/article/pii/S0010448523001240) | [Code](https://github.com/felixzhao0116/Robust-and-Accurate-Feature-Detection-on-Point-Clouds) |
+|   <img src="img/point2roof.png" width="300">   | [Point2Roof: End-to-end 3D building roof modeling from airborne LiDAR point clouds](https://www.sciencedirect.com/science/article/pii/S0924271622002362) |       [Code](https://github.com/Li-Li-Whu/Point2Roof)        |
+|     <img src="img/roofVE.png" width="300">     | [Detecting vertices of building roofs from ALS point cloud data](https://www.tandfonline.com/doi/abs/10.1080/17538947.2023.2283486) |       [Code](https://github.com/Alessiacosmos/RoofVE)        |
+|    <img src="img/bwformer.png" width="300">    | [BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html) |        [Code](https://github.com/3dv-casia/BWformer)         |
+| <img src="img/3d-edge-sketch.png" width="300"> | [3D Edge Sketch from Multiview Images](https://ieeexplore.ieee.org/abstract/document/10943943/) |     [Code](https://github.com/C-H-Chien/3D_Edge_Sketch)      |
+|      <img src="img/NEF.png" width="300">       | [Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images](http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html) |        [Code](https://github.com/yunfan1202/NEF_code)        |
+|      <img src="img/Neat.png" width="300">      | [Neat: Distilling 3d wireframes from neural attraction fields](http://openaccess.thecvf.com/content/CVPR2024/html/Xue_NEAT_Distilling_3D_Wireframes_from_Neural_Attraction_Fields_CVPR_2024_paper.html) |          [Code](https://github.com/cherubicxn/neat)          |
+|      <img src="img/EMAP.png" width="300">      | [3d neural edge reconstruction](http://openaccess.thecvf.com/content/CVPR2024/html/Li_3D_Neural_Edge_Reconstruction_CVPR_2024_paper.html) |             [Code](https://github.com/cvg/EMAP)              |
+|     <img src="img/EdgeGS.png" width="300">     | [EdgeGaussians-3D Edge Mapping via Gaussian Splatting](https://ieeexplore.ieee.org/abstract/document/10943309/) |    [Code](https://github.com/kunalchelani/EdgeGaussians)     |
+|    <img src="img/CurveGS.png" width="300">     | [Curve-Aware Gaussian Splatting for 3D Parametric Curve Reconstruction](https://arxiv.org/abs/2506.21401) |     [Code](https://github.com/zhirui-gao/Curve-Gaussian)     |
+|      <img src="img/SGCR.png" width="300">      | [SGCR: Spherical Gaussians for Efficient 3D Curve Reconstruction](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_SGCR_Spherical_Gaussians_for_Efficient_3D_Curve_Reconstruction_CVPR_2025_paper.html) |          [Code](https://github.com/Martinyxr/SGCR)           |
+
+## 相关文献列表
 
 ### 一、基于网格的三维线框生成方法
 
@@ -122,7 +162,7 @@
 2. [Edge-aware point set resampling](https://dl.acm.org/doi/abs/10.1145/2421636.2421645)
 3. [Ec-net: an edge-aware point set consolidation network](http://openaccess.thecvf.com/content_ECCV_2018/html/Lequan_Yu_EC-Net_an_Edge-aware_ECCV_2018_paper.html)
 4. [Learning part boundaries from 3D point clouds](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14078)
-5. [Def: Deep estimation of sharp geometric features in 3d shapes](https://par.nsf.gov/biblio/10357187)
+5. [Def: Deep estimation of sharp geometric features in 3d shapes](https://dl.acm.org/doi/abs/10.1145/3528223.3530140)
 6. [MSL-Net: Sharp feature detection network for 3D point clouds](https://ieeexplore.ieee.org/abstract/document/10373950/)
 7. [Complexgen: Cad reconstruction by b-rep chain complex generation](https://dl.acm.org/doi/abs/10.1145/3528223.3530078)
 8. [Surface and edge detection for primitive fitting of point clouds](https://dl.acm.org/doi/abs/10.1145/3588432.3591522)
