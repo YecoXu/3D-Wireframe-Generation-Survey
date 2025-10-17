@@ -145,3 +145,36 @@
 25. [Generating 3D House Wireframes with Semantics](https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13)
 26. [Clr-wire: Towards continuous latent representations for 3d curve wireframe generation](https://dl.acm.org/doi/abs/10.1145/3721238.3730638)
 
+#### 2.3 面向遥感点云的三维线框生成
+
+##### 2.3.1 面向大型建筑物三维点云的线段检测
+
+1. [Edge detection and feature line tracing in 3D-point clouds by analyzing geometric properties of neighborhoods](https://www.mdpi.com/2072-4292/8/9/710)
+2. [Line segment extraction for large scale unorganized point clouds](https://www.sciencedirect.com/science/article/pii/S0924271615000362)
+3. [Geometric feature enhanced line segment extraction from large-scale point clouds with hierarchical topological optimization](https://www.sciencedirect.com/science/article/pii/S1569843222000607)
+4. [Facet segmentation-based line segment extraction for large-scale point clouds](https://ieeexplore.ieee.org/abstract/document/7945251/)
+5. [Vision-based localization using an edge map extracted from 3D laser range data](https://ieeexplore.ieee.org/abstract/document/5509517/)
+6. [Line-based extrinsic calibration of range and image sensors](https://ieeexplore.ieee.org/abstract/document/6631095/)
+7. [Topologically aware building rooftop reconstruction from airborne laser scanning point clouds](https://ieeexplore.ieee.org/abstract/document/8025472/)
+8. [Robust and accurate feature detection on point clouds](https://www.sciencedirect.com/science/article/pii/S0010448523001240)
+9. [Large-scale point cloud contour extraction via 3D guided multi-conditional generative adversarial network](https://www.sciencedirect.com/science/article/pii/S0924271620300940)
+10. [Superline3d: Self-supervised line segmentation and description for lidar point cloud](https://link.springer.com/chapter/10.1007/978-3-031-20077-9_16)
+11. [Feature line generation and regularization from point clouds](https://ieeexplore.ieee.org/abstract/document/8793229/)
+12. [Detection of closed sharp edges in point clouds using normal estimation and graph theory](https://www.sciencedirect.com/science/article/pii/S0010448506002260)
+13. [PECo: A Point-Edge Collaborative Framework for Global-Aware Urban Building Contouring From Unstructured Point Clouds](https://ieeexplore.ieee.org/abstract/document/10360156/)
+14. [Extracting 3-D structural lines of building from ALS point clouds using graph neural network embedded with corner information](https://ieeexplore.ieee.org/abstract/document/10130341/)
+15. [LCE-NET: Contour extraction for large-scale 3-D point clouds](https://ieeexplore.ieee.org/abstract/document/10251999/)
+16. [Accurate and complete line segment extraction for large-scale point clouds](https://www.sciencedirect.com/science/article/pii/S1569843224000827)
+
+##### 2.3.2 面向机载LiDAR点云的屋顶线框生成
+
+1. [3D building detection and modeling from aerial LIDAR data](https://ieeexplore.ieee.org/abstract/document/1641024/)
+2. [Model driven reconstruction of roofs from sparse LIDAR point clouds](https://www.sciencedirect.com/science/article/pii/S0924271612002043)
+3. [Flexible building primitives for 3D building modeling](https://www.sciencedirect.com/science/article/pii/S0924271615000143)
+4. [Self-supervised pre-training for 3-D roof reconstruction on LiDAR data](https://ieeexplore.ieee.org/abstract/document/10423095/)
+5. [Point2Roof: End-to-end 3D building roof modeling from airborne LiDAR point clouds](https://www.sciencedirect.com/science/article/pii/S0924271622002362)
+6. [Detecting vertices of building roofs from ALS point cloud data](https://www.tandfonline.com/doi/abs/10.1080/17538947.2023.2283486)
+7. [Self-Supervised Pretraining Framework for Extracting Global Structures From Building Point Clouds via Completion](https://ieeexplore.ieee.org/abstract/document/10713355/)
+8. [PBWR: Parametric-building-wireframe reconstruction from aerial LiDAR point clouds](https://openaccess.thecvf.com/content/CVPR2024/html/Huang_PBWR_Parametric-Building-Wireframe_Reconstruction_from_Aerial_LiDAR_Point_Clouds_CVPR_2024_paper.html)
+9. [BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html)
+10. [EdgeDiff: Edge-aware Diffusion Network for Building Reconstruction from Point Clouds](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_EdgeDiff_Edge-aware_Diffusion_Network_for_Building_Reconstruction_from_Point_Clouds_CVPR_2025_paper.html)
