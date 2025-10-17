@@ -1,0 +1,617 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>README</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='3d-wireframe-generation-survey'><span>3D-Wireframe-Generation-Survey</span></h1><p><span>三维线框生成的研究发展与综述</span></p><p>&nbsp;</p><h2 id='常用的点云特征提取backbone'><span>常用的点云特征提取backbone</span></h2><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>预览</span></th><th style='text-align:left;' ><span>论文名称</span></th><th style='text-align:center;' ><span>相关链接</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="img/pointnet.png" width="300"></td><td style='text-align:left;' ><a href='http://openaccess.thecvf.com/content_cvpr_2017/html/Qi_PointNet_Deep_Learning_CVPR_2017_paper.html'><span>Pointnet: Deep learning on point sets for 3d classification and segmentation</span></a></td><td style='text-align:center;' ><a href='https://github.com/charlesq34/pointnet'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/pointnet2.jpg" width="300"></td><td style='text-align:left;' ><a href='https://proceedings.neurips.cc/paper/2017/hash/d8bf84be3800d12f74d8b05e9b89836f-Abstract.html'><span>Pointnet++: Deep hierarchical feature learning on point sets in a metric space</span></a></td><td style='text-align:center;' ><a href='https://github.com/charlesq34/pointnet2'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/DGCNN.png" width="300"></td><td style='text-align:left;' ><a href='https://dl.acm.org/doi/abs/10.1145/3326362'><span>Dynamic graph cnn for learning on point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/WangYueFt/dgcnn/tree/master'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/pointcept.png" width="300"></td><td style='text-align:left;' ><a href='https://github.com/Pointcept/Pointcept'><span>Pointcept</span></a></td><td style='text-align:center;' ><a href='https://github.com/Pointcept/Pointcept'><span>Code</span></a><span> </span></td></tr></tbody></table></figure><h2 id='常用数据集'><span>常用数据集</span></h2><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>预览</span></th><th style='text-align:left;' ><span>论文名称</span></th><th style='text-align:center;' ><span>相关链接</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="img/ABC.png" width="300"></td><td style='text-align:left;' ><a href='http://openaccess.thecvf.com/content_CVPR_2019/html/Koch_ABC_A_Big_CAD_Model_Dataset_for_Geometric_Deep_Learning_CVPR_2019_paper.html'><span>Abc: A big cad model dataset for geometric deep learning</span></a></td><td style='text-align:center;' ><a href='https://deep-geometry.github.io/abc-dataset/'><span>Project</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/Building3D.png" width="300"></td><td style='text-align:left;' ><a href='http://openaccess.thecvf.com/content/ICCV2023/html/Wang_Building3D_A_Urban-Scale_Dataset_and_Benchmarks_for_Learning_Roof_Structures_ICCV_2023_paper.html'><span>Building3d: A urban-scale dataset and benchmarks for learning roof structures from point clouds</span></a></td><td style='text-align:center;' ><a href='https://building3d.ucalgary.ca/'><span>Project</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/Semantic3d.png" width="300"></td><td style='text-align:left;' ><a href='https://arxiv.org/abs/1704.03847'><span>Semantic3d. net: A new large-scale point cloud classification benchmark</span></a></td><td style='text-align:center;' ><a href='semantic3d.net'><span>Project</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/DTU.png" width="300"></td><td style='text-align:left;' ><a href='https://link.springer.com/article/10.1007/s11263-016-0902-9'><span>Large-scale data for multiple-view stereopsis</span></a></td><td style='text-align:center;' ><a href='https://roboimagedata.compute.dtu.dk/'><span>Project</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/blendedmvs.png" width="300"></td><td style='text-align:left;' ><a href='http://openaccess.thecvf.com/content_CVPR_2020/html/Yao_BlendedMVS_A_Large-Scale_Dataset_for_Generalized_Multi-View_Stereo_Networks_CVPR_2020_paper.html'><span>Blendedmvs: A large-scale dataset for generalized multi-view stereo networks</span></a></td><td style='text-align:center;' ><a href='https://github.com/YoYo000/BlendedMVS'><span>Project</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/ABC-NEF.png" width="300"></td><td style='text-align:left;' ><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html'><span>Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images</span></a></td><td style='text-align:center;' ><a href='https://yunfan1202.github.io/NEF/'><span>Project</span></a><span> </span></td></tr></tbody></table></figure><p>&nbsp;</p><h2 id='部分技术和算法源代码'><span>部分技术和算法源代码</span></h2><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>预览</span></th><th style='text-align:left;' ><span>论文名称</span></th><th style='text-align:center;' ><span>相关链接</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="img/FREE.png" width="300"></td><td style='text-align:left;' ><a href='https://ieeexplore.ieee.org/abstract/document/7371262/'><span>Fast and robust edge extraction in unorganized point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/denabazazian/Edge_Extraction'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/VCM.png" width="300"></td><td style='text-align:left;' ><a href='https://www.sciencedirect.com/science/article/pii/S0097849313000885'><span>Voronoi-based feature curves extraction for sampled singular surfaces</span></a></td><td style='text-align:center;' ><a href='https://doc.cgal.org/latest/Point_set_processing_3/group__PkgPointSetProcessing3Algorithms.html#gaf1e415a68652535215c60bc52ebacca3'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/EAR.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/2421636.2421645'><span>Edge-aware point set resampling</span></a></td><td style='text-align:center;' ><a href='https://doc.cgal.org/4.11/Point_set_processing_3/Point_set_processing_3_2edge_aware_upsample_point_set_example_8cpp-example.html'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/MFLE.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://ieeexplore.ieee.org/abstract/document/9351738/'><span>Multiscale feature line extraction from raw point clouds based on local surface variation and anisotropic contraction</span></a></td><td style='text-align:center;' ><a href='https://github.com/chenhonghua/Feature-line-extraction'><span>Code</span></a></td></tr><tr><td style='text-align:center;' ><img src="img/RFEPS.png" width="300"></td><td style='text-align:left;' ><a href='https://dl.acm.org/doi/abs/10.1145/3550454.3555443'><span>Rfeps: Reconstructing feature-line equipped polygonal surface</span></a></td><td style='text-align:center;' ><a href='https://github.com/Xrvitd/RFEPS'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/EC-Net.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='http://openaccess.thecvf.com/content_ECCV_2018/html/Lequan_Yu_EC-Net_an_Edge-aware_ECCV_2018_paper.html'><span>Ec-net: an edge-aware point set consolidation network</span></a></td><td style='text-align:center;' ><a href='https://github.com/yulequan/EC-Net'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/DEF.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/3528223.3530140'><span>Def: Deep estimation of sharp geometric features in 3d shapes</span></a></td><td style='text-align:center;' ><a href='https://github.com/artonson/def'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/MSL-Net.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://ieeexplore.ieee.org/abstract/document/10373950/'><span>MSL-Net: Sharp feature detection network for 3D point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/XianheJiao/Sharp-feature-detection-in-point-cloud-'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/complexgen.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/3528223.3530078'><span>Complexgen: Cad reconstruction by b-rep chain complex generation</span></a></td><td style='text-align:center;' ><a href='https://github.com/guohaoxiang/ComplexGen'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/SED.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/3588432.3591522'><span>Surface and edge detection for primitive fitting of point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/yuanqili78/SED-Net'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/brepgen.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/3658129'><span>Brepgen: A b-rep generative diffusion model with structured latent geometry</span></a></td><td style='text-align:center;' ><a href='https://github.com/samxuxiang/BrepGen'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/split-and-fit.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/3658155'><span>Split-and-fit: Learning b-reps via structure-aware voronoi partitioning</span></a></td><td style='text-align:center;' ><a href='https://github.com/yilinliu77/NVDNet'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/SFC.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://www.sciencedirect.com/science/article/pii/S0167839623000365'><span>Sharp feature consolidation from raw 3D point clouds via displacement learning</span></a></td><td style='text-align:center;' ><a href='https://github.com/Tong-ZHAO/SFCNet'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/STAR-edge.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Li_STAR-Edge_Structure-aware_Local_Spherical_Curve_Representation_for_Thin-walled_Edge_Extraction_CVPR_2025_paper.html'><span>STAR-Edge: Structure-aware Local Spherical Curve Representation for Thin-walled Edge Extraction from Unstructured Point Clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/Miraclelzk/STAR-Edge'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/PIE.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://proceedings.neurips.cc/paper/2020/hash/e94550c93cd70fe748e6982b3439ad3b-Abstract.html'><span>Pie-net: Parametric inference of point cloud edges</span></a></td><td style='text-align:center;' ><a href='https://github.com/wangxiaogang866/PIE-NET'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/pc2wf.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://arxiv.org/abs/2103.02766'><span>Pc2wf: 3d wireframe reconstruction from raw point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/YujiaLiu76/PC2WF'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/nerve.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Zhu_NerVE_Neural_Volumetric_Edges_for_Parametric_Curve_Extraction_From_Point_CVPR_2023_paper.html'><span>Nerve: Neural volumetric edges for parametric curve extraction from point cloud</span></a></td><td style='text-align:center;' ><a href='https://github.com/uhzoaix/NerVE'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/PCER-Net.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://ieeexplore.ieee.org/abstract/document/10909144/'><span>Deep Point Cloud Edge Reconstruction Via Surface Patch Segmentation</span></a></td><td style='text-align:center;' ><a href='https://github.com/JAJASONW/PCER-Net'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/3dwire.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13'><span>Generating 3D House Wireframes with Semantics</span></a></td><td style='text-align:center;' ><a href='https://github.com/3d-house-wireframe/3dwire'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/clrwire.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://dl.acm.org/doi/abs/10.1145/3721238.3730638'><span>Clr-wire: Towards continuous latent representations for 3d curve wireframe generation</span></a></td><td style='text-align:center;' ><a href='https://github.com/qixuema/CLR-Wire'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/RAFD.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://www.sciencedirect.com/science/article/pii/S0010448523001240'><span>Robust and accurate feature detection on point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/felixzhao0116/Robust-and-Accurate-Feature-Detection-on-Point-Clouds'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/point2roof.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://www.sciencedirect.com/science/article/pii/S0924271622002362'><span>Point2Roof: End-to-end 3D building roof modeling from airborne LiDAR point clouds</span></a></td><td style='text-align:center;' ><a href='https://github.com/Li-Li-Whu/Point2Roof'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/roofVE.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://www.tandfonline.com/doi/abs/10.1080/17538947.2023.2283486'><span>Detecting vertices of building roofs from ALS point cloud data</span></a></td><td style='text-align:center;' ><a href='https://github.com/Alessiacosmos/RoofVE'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/bwformer.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html'><span>BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer</span></a></td><td style='text-align:center;' ><a href='https://github.com/3dv-casia/BWformer'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/3d-edge-sketch.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://ieeexplore.ieee.org/abstract/document/10943943/'><span>3D Edge Sketch from Multiview Images</span></a></td><td style='text-align:center;' ><a href='https://github.com/C-H-Chien/3D_Edge_Sketch'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/NEF.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html'><span>Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images</span></a></td><td style='text-align:center;' ><a href='https://github.com/yunfan1202/NEF_code'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/Neat.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='http://openaccess.thecvf.com/content/CVPR2024/html/Xue_NEAT_Distilling_3D_Wireframes_from_Neural_Attraction_Fields_CVPR_2024_paper.html'><span>Neat: Distilling 3d wireframes from neural attraction fields</span></a></td><td style='text-align:center;' ><a href='https://github.com/cherubicxn/neat'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/EMAP.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='http://openaccess.thecvf.com/content/CVPR2024/html/Li_3D_Neural_Edge_Reconstruction_CVPR_2024_paper.html'><span>3d neural edge reconstruction</span></a></td><td style='text-align:center;' ><a href='https://github.com/cvg/EMAP'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/EdgeGS.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://ieeexplore.ieee.org/abstract/document/10943309/'><span>EdgeGaussians-3D Edge Mapping via Gaussian Splatting</span></a></td><td style='text-align:center;' ><a href='https://github.com/kunalchelani/EdgeGaussians'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/CurveGS.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://arxiv.org/abs/2506.21401'><span>Curve-Aware Gaussian Splatting for 3D Parametric Curve Reconstruction</span></a></td><td style='text-align:center;' ><a href='https://github.com/zhirui-gao/Curve-Gaussian'><span>Code</span></a><span> </span></td></tr><tr><td style='text-align:center;' ><img src="img/SGCR.png" width="300"></td><td style='text-align:left;' ><span>  </span><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Yang_SGCR_Spherical_Gaussians_for_Efficient_3D_Curve_Reconstruction_CVPR_2025_paper.html'><span>SGCR: Spherical Gaussians for Efficient 3D Curve Reconstruction</span></a></td><td style='text-align:center;' ><a href='https://github.com/Martinyxr/SGCR'><span>Code</span></a><span> </span></td></tr></tbody></table></figure><h2 id='相关文献列表'><span>相关文献列表</span></h2><h3 id='一基于网格的三维线框生成方法'><span>一、基于网格的三维线框生成方法</span></h3><h4 id='11-基于曲率估计的谷脊线检测'><span>1.1 基于曲率估计的谷脊线检测</span></h4><ol><li><p><a href='https://mitpress.mit.edu/9780262111393/'><span>Solid shape</span></a></p></li><li><p><a href='https://www.bmva-archive.org.uk/bmvc/1996/kent_1.pdf'><span>Ridge curves and shape analysis</span></a></p></li><li><p><a href='https://aaai.org/papers/0012-SS00-04-012-extraction-of-feature-lines-on-triangulated-surfaces-using-morphological-operators/'><span>Extraction of feature lines on triangulated surfaces using morphological operators</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/full/10.1111/1467-8659.00531'><span>Detection of salient curvature features on polygonal surfaces</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1524070302905746'><span>Normal vector voting: crease detection and curvature estimation on large, noisy meshes</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0167839606000410'><span>The implicit structure of ridges of a smooth parametric surface</span></a></p></li><li><p><a href='https://dl.acm.org/doi/10.1145/1015706.1015768'><span>Ridge-valley lines on meshes via implicit surface fitting</span></a></p></li><li><p><a href='https://www2.riken.jp/brict/Yoshizawa/Papers/spm05ybs.pdf'><span>Fast and Robust Detection of Crest Lines on Meshes</span></a></p></li><li><p><a href='https://diglib.eg.org/items/860abe10-40fd-4436-bae1-7db8f05df494'><span>Smooth Feature Lines on Surface Meshes</span></a></p></li><li><p><a href='https://gfx.cs.princeton.edu/pubs/Rusinkiewicz_2004_ECA/curvpaper.pdf'><span>Estimating Curvatures and Their Derivatives on Triangle Meshes</span></a></p></li><li><p><a href='https://people.eecs.berkeley.edu/~sequin/CS284/TEXT/p167-moreton.pdf'><span>Functional Optimization for Fair Surface Design</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/378150'><span>Large Deformable Splines, Crest Lines and Matching</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/abs/pii/S0010448505001806'><span>Finding Ridges and Valleys in a Discrete Surface Using a Modified MLS Approximation</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0167839608000435'><span>Fast, Robust, and Faithful Methods for Detecting Crest Lines on Meshes</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2009.01528.x'><span>Separatrix Persistence: Extraction of Salient Edges on Surfaces Using Topological Methods</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/abs/pii/S0010448508002297'><span>Feature Detection of Triangular Meshes Based on Tensor Voting Theory</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/1457515.1409110'><span>Demarcating Curves for Shape Illustration</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S107731429690507X'><span>Thin nets and crest lines: Application to satellite data and medical images</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1077316996900428'><span>The 3D marching lines algorithm</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/746714/'><span>Extracting line representations of sulcal and gyral patterns in MR images of the human brain</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/1009387/'><span>Using a statistical shape model to extract sulcal curves on the outer cortex of the human brain</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1109/TVCG.2004.24'><span>Crest lines for surface segmentation and flattening</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2011.01858.x'><span>Learning line features in 3D geometry</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13337'><span>Feature curve co-completion in noisy data</span></a></p></li></ol><h4 id='12-基于网格分割的特征曲线检测'><span>1.2 基于网格分割的特征曲线检测</span></h4><ol><li><p><a href='https://dl.acm.org/doi/10.1145/2508363.2508423'><span>A general and efficient method for finding cycles in 3D curve networks</span></a></p></li><li><p><a href='https://dl.acm.org/doi/10.1145/2766990'><span>Flow aligned surfacing of curve networks</span></a></p></li><li><p><a href='https://dl.acm.org/doi/10.1145/3072959.3073639'><span>FlowRep: Descriptive curve networks for free-form design shapes</span></a></p></li><li><p><a href='https://dl.acm.org/doi/10.1145/3411764.3445158'><span>Cassie: Curve and surface sketching in immersive environments</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.15054'><span>Strokes2Surface: Recovering curve networks from 4D architectural design sketches</span></a></p></li><li><p><a href='https://dl.acm.org/doi/10.1145/1276377.1276429'><span>Fibermesh: Designing freeform surfaces with 3D curves</span></a></p></li><li><p><a href='https://www.cs.hunter.cuny.edu/~ioannis/3DP_F03/PAPERS/SEGMENTATION/besl_jain.pdf'><span>Segmentation through variable-order surface fitting</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448596000590'><span>High-level CAD model acquisition from range images</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/1186562.1015817'><span>Variational shape approximation</span></a></p></li><li><p><a href='https://www.graphics.rwth-aachen.de/publication/87/hybrid1.pdf'><span>Structure Recovery via Hybrid Variational Surface Approximation</span></a></p></li><li><p><a href='https://link.springer.com/chapter/10.1007/11802914_6'><span>Quadric surface extraction by variational shape approximation</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448512000887'><span>Variational mesh segmentation via quadric surface fitting</span></a></p></li><li><p><a href='https://www.jcad.cn/en/article/doi/10.3724/SP.J.1089.2019.17508'><span>Interactive segmentation of scanned mechanical models based on quadratic surfaces fitting</span></a></p></li><li><p><a href='https://www.cs.toronto.edu/~psimari/publications/2005_gi_simari_singh.pdf'><span>Extraction and remeshing of ellipsoidal representations from mesh data</span></a></p></li><li><p><a href='https://openurl.ebsco.com/EPDB%3Agcd%3A11%3A23907611/detailv2?sid=ebsco%3Aplink%3Ascholar-a&amp;id=ebsco%3Agcd%3A18272051&amp;crl=c&amp;jrnl=01677055&amp;id_token_hint=eyJraWQiOiIxNjg2MTQ5MjEzNjMxIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJzMzg5NDEzMC5tYWluIiwiZGV2aWNlX2lkIjoiNTUxNjQ3OTItY2FlZC00OGIwLTg2MTMtZjJlYjI5ZGJkY2VlIiwiYW1yIjpbImlwIl0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLmVic2NvLnpvbmVcL2FwaVwvZGlzcGF0Y2hlciIsImNsaWVudF9pZCI6ImF3Z3ljSXg1N01yd25EUTVoNFVlNnlDVkVQMHI1TXQ5IiwiYXVkIjpbImh0dHBzOlwvXC9hdXRoLmVic2NvLnpvbmVcL2FwaVwvZGlzcGF0Y2hlciIsImh0dHA6XC9cL2F1dGgtY3h0LW1nci5laG9zdC1saXZlLmVrcy5laG9zdC1saXZlLmVpc2x6LmNvbSIsImh0dHBzOlwvXC9hY2Nlc3MtYXBpLmVic2NvLmNvbSIsImF3Z3ljSXg1N01yd25EUTVoNFVlNnlDVkVQMHI1TXQ5Il0sImF6cCI6ImF3Z3ljSXg1N01yd25EUTVoNFVlNnlDVkVQMHI1TXQ5IiwiaWR0IjoiaW5zdGl0dXRpb25hbCIsImV4cCI6MTc2MDYyODUwMSwiaWF0IjoxNzYwNjI0OTAxLCJjbGllbnRfbmFtZSI6IldlYmF1dGggLSBOZXcgRURTIGlkX3Rva2VuIiwianRpIjoiYjMwOTY2N2UtOWZhYS00ODRiLWI3ZDQtYjg1ZjA4Mzc4ZWQ0IiwidXNlcm5hbWUiOiJJbnN0aXR1dGlvbmFsVXNlciJ9.SU685yBYb62AweEc8810G9HOvFBnBnPZirmIY-D1zDi3HwX29Jo0qR1BhQORU-hSEpf5c98er4cm6bW0wFmLBUYA2GQvzWBu4yHGzbbOc56-QAu8KodMuwfh-yPqCoF3s7nVe4h2ANROchYL6OLf9_5K6H8BLb90yw_k01BfCpSyLmN11_YLkigZbx3jSILy-hsaXqJhnt_B3s58Nf-LU_L87x3nYwvPdgN0ItTQfJZfW66xCunxVVi4fYkPhPTjBhsHkzDMjXRwOAMzQ-zsxdT3gjNE9LLjrF4Y2PkiRDoYYHonuSoZvlgpOBUD8fhPFcBJytL3jeEWR8bD6DSj1g&amp;link_origin=scholar.google.com.hk'><span>D-Charts: Quasi-Developable Mesh Segmentation</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/9296787'><span>Blending surface segmentation and editing for 3D models</span></a></p></li><li><p><a href='https://link.springer.com/article/10.1007/s00371-006-0375-x'><span>Hierarchical mesh segmentation based on fitting primitives</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/882262.882369'><span>Hierarchical mesh decomposition using fuzzy clustering and cuts</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448504002003'><span>A new CAD mesh segmentation method, based on curvature tensor analysis</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/1661412.1618483'><span>Abstraction of man-made shapes</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.12834'><span>Adapting feature curve networks to a prescribed scale</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/1576246.1531339'><span>iWIRES: An analyze-and-edit approach to shape manipulation</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0097849310001810'><span>Exoskeleton: Curve network abstraction for 3D shapes</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0031320317303096'><span>Recognition of feature curves on 3D shapes using an algebraic approach to Hough transforms</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0097849314001101'><span>Patch layout generation by detecting feature networks</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448520301421'><span>Extracting cycle-aware feature curve networks from 3D models</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10897514'><span>Feature-aligned segmentation using correlation clustering</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/9234096'><span>Seg-mat: 3D shape segmentation using medial axis transform</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10814983'><span>3D Shape Segmentation with Potential Consistency Mining and Enhancement</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448509002851'><span>Patch layout from feature graphs</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1524070317300498'><span>Extract feature curves on noisy triangular meshes</span></a></p></li></ol><h3 id='二基于点云的三维线框生成方法'><span>二、基于点云的三维线框生成方法</span></h3><h4 id='21-基于几何分析的尖锐特征检测'><span>2.1 基于几何分析的尖锐特征检测</span></h4><ol><li><p><a href='https://www.researchgate.net/profile/Stefan-Gumhold/publication/2554207_Feature_Extraction_from_Point_Clouds/links/0deec522ee1463f801000000/Feature-Extraction-from-Point-Clouds.pdf'><span>Feature Extraction From Point Clouds</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-8659.00675'><span>Multi‐scale feature extraction on point‐sampled surfaces</span></a></p></li><li><p><a href='https://link.springer.com/article/10.1007/s00371-008-0223-2'><span>Spline-based feature curves from point-sampled geometry</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2010.01771.x'><span>Feature preserving mesh generation from 3D point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S152407031200032X'><span>Sharp feature preserving MLS surface reconstruction based on local feature line approximations</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/5521460/'><span>Sharp feature detection in point clouds</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/7371262/'><span>Fast and robust edge extraction in unorganized point clouds</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2012.03183.x'><span>Feature‐preserving reconstruction of singular surfaces</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/1073204.1073227'><span>Robust moving least-squares fitting with sharp features</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.5555/1281991.1281999'><span>Data-dependent MLS for faithful surface approximation</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0097849313000885'><span>Voronoi-based feature curves extraction for sampled singular surfaces</span></a></p></li><li><p><a href='https://www.google.com/books?hl=zh-CN&amp;lr=&amp;id=WCVFWYlAeCMC&amp;oi=fnd&amp;pg=PA3&amp;dq=Patch-graph+reconstruction+for+piecewise+smooth+surfaces&amp;ots=QDKiVh40M-&amp;sig=J6VqqWfIGI9zdC067UGE6uCBfrs'><span>Patch-graph reconstruction for piecewise smooth surfaces</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2009.01388.x'><span>Feature preserving point set surfaces based on non‐linear kernel regression</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1524070312000288'><span>Multi-scale tensor voting for feature extraction from unstructured point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448520300506'><span>A feature-preserving framework for point cloud denoising</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/5669298/'><span>Voronoi-based curvature and feature estimation from point clouds</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14500'><span>SGLBP: Subgraph‐based local binary patterns for feature extraction on point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1524070316300054'><span>Extracting feature lines from point clouds based on smooth shrink and iterative thinning</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/9600876/'><span>Neighbor reweighted local centroid for geometric feature identification</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448513001000'><span>An adaptive normal estimation method for scanned point clouds with sharp features</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0097849316300097'><span>A statistical approach for extraction of feature lines from point clouds</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/8593910/'><span>Edge and corner detection for unorganized 3d point clouds with application to robotic welding</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/9351738/'><span>Multiscale feature line extraction from raw point clouds based on local surface variation and anisotropic contraction</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3550454.3555443'><span>Rfeps: Reconstructing feature-line equipped polygonal surface</span></a></p></li></ol><h4 id='22-基于深度学习的cad模型三维线框生成'><span>2.2 基于深度学习的CAD模型三维线框生成</span></h4><ol><li><p><a href='https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Hackel_Contour_Detection_in_CVPR_2016_paper.html'><span>Contour detection in unstructured 3D point clouds</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/2421636.2421645'><span>Edge-aware point set resampling</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/html/Lequan_Yu_EC-Net_an_Edge-aware_ECCV_2018_paper.html'><span>Ec-net: an edge-aware point set consolidation network</span></a></p></li><li><p><a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14078'><span>Learning part boundaries from 3D point clouds</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3528223.3530140'><span>Def: Deep estimation of sharp geometric features in 3d shapes</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10373950/'><span>MSL-Net: Sharp feature detection network for 3D point clouds</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3528223.3530078'><span>Complexgen: Cad reconstruction by b-rep chain complex generation</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3588432.3591522'><span>Surface and edge detection for primitive fitting of point clouds</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3658129'><span>Brepgen: A b-rep generative diffusion model with structured latent geometry</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3658155'><span>Split-and-fit: Learning b-reps via structure-aware voronoi partitioning</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3730842'><span>Hola: B-rep generation using a holistic latent representation</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0167839623000365'><span>Sharp feature consolidation from raw 3D point clouds via displacement learning</span></a></p></li><li><p><a href='https://openaccess.thecvf.com/content/CVPR2023W/StruCo3D/html/Cherenkova_SepicNet_Sharp_Edges_Recovery_by_Parametric_Inference_of_Curves_in_CVPRW_2023_paper.html'><span>Sepicnet: Sharp edges recovery by parametric inference of curves in 3d shapes</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10458949/'><span>Thin-walled aircraft panel edge extraction from 3-D measurement surfaces via feature-aware displacement learning</span></a></p></li><li><p><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Li_STAR-Edge_Structure-aware_Local_Spherical_Curve_Representation_for_Thin-walled_Edge_Extraction_CVPR_2025_paper.html'><span>STAR-Edge: Structure-aware Local Spherical Curve Representation for Thin-walled Edge Extraction from Unstructured Point Clouds</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3414685.3417807'><span>Sketch2cad: Sequential cad modeling by sketching in context</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3528223.3530133'><span>Free2cad: Parsing freehand drawings into cad commands</span></a></p></li><li><p><a href='https://proceedings.neurips.cc/paper/2020/hash/e94550c93cd70fe748e6982b3439ad3b-Abstract.html'><span>Pie-net: Parametric inference of point cloud edges</span></a></p></li><li><p><a href='https://arxiv.org/abs/2103.02766'><span>Pc2wf: 3d wireframe reconstruction from raw point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0097849322001194'><span>Coarse-to-fine pipeline for 3D wireframe reconstruction from point cloud</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0097849323001449'><span>WireframeNet: A novel method for wireframe generation from point cloud</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/11005571/'><span>EDWG: Efficient Edge Detection and Wireframe Generation from Point Clouds</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Zhu_NerVE_Neural_Volumetric_Edges_for_Parametric_Curve_Extraction_From_Point_CVPR_2023_paper.html'><span>Nerve: Neural volumetric edges for parametric curve extraction from point cloud</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10909144/'><span>Deep Point Cloud Edge Reconstruction Via Surface Patch Segmentation</span></a></p></li><li><p><a href='https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13'><span>Generating 3D House Wireframes with Semantics</span></a></p></li><li><p><a href='https://dl.acm.org/doi/abs/10.1145/3721238.3730638'><span>Clr-wire: Towards continuous latent representations for 3d curve wireframe generation</span></a></p></li></ol><h4 id='23-面向遥感点云的三维线框生成'><span>2.3 面向遥感点云的三维线框生成</span></h4><h5 id='231-面向大型建筑物三维点云的线段检测'><span>2.3.1 面向大型建筑物三维点云的线段检测</span></h5><ol><li><p><a href='https://www.mdpi.com/2072-4292/8/9/710'><span>Edge detection and feature line tracing in 3D-point clouds by analyzing geometric properties of neighborhoods</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0924271615000362'><span>Line segment extraction for large scale unorganized point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1569843222000607'><span>Geometric feature enhanced line segment extraction from large-scale point clouds with hierarchical topological optimization</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/7945251/'><span>Facet segmentation-based line segment extraction for large-scale point clouds</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/5509517/'><span>Vision-based localization using an edge map extracted from 3D laser range data</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/6631095/'><span>Line-based extrinsic calibration of range and image sensors</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/8025472/'><span>Topologically aware building rooftop reconstruction from airborne laser scanning point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448523001240'><span>Robust and accurate feature detection on point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0924271620300940'><span>Large-scale point cloud contour extraction via 3D guided multi-conditional generative adversarial network</span></a></p></li><li><p><a href='https://link.springer.com/chapter/10.1007/978-3-031-20077-9_16'><span>Superline3d: Self-supervised line segmentation and description for lidar point cloud</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/8793229/'><span>Feature line generation and regularization from point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0010448506002260'><span>Detection of closed sharp edges in point clouds using normal estimation and graph theory</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10360156/'><span>PECo: A Point-Edge Collaborative Framework for Global-Aware Urban Building Contouring From Unstructured Point Clouds</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10130341/'><span>Extracting 3-D structural lines of building from ALS point clouds using graph neural network embedded with corner information</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10251999/'><span>LCE-NET: Contour extraction for large-scale 3-D point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1569843224000827'><span>Accurate and complete line segment extraction for large-scale point clouds</span></a></p></li></ol><h5 id='232-面向机载lidar点云的屋顶线框生成'><span>2.3.2 面向机载LiDAR点云的屋顶线框生成</span></h5><ol><li><p><a href='https://ieeexplore.ieee.org/abstract/document/1641024/'><span>3D building detection and modeling from aerial LIDAR data</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0924271612002043'><span>Model driven reconstruction of roofs from sparse LIDAR point clouds</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0924271615000143'><span>Flexible building primitives for 3D building modeling</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10423095/'><span>Self-supervised pre-training for 3-D roof reconstruction on LiDAR data</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0924271622002362'><span>Point2Roof: End-to-end 3D building roof modeling from airborne LiDAR point clouds</span></a></p></li><li><p><a href='https://www.tandfonline.com/doi/abs/10.1080/17538947.2023.2283486'><span>Detecting vertices of building roofs from ALS point cloud data</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10713355/'><span>Self-Supervised Pretraining Framework for Extracting Global Structures From Building Point Clouds via Completion</span></a></p></li><li><p><a href='https://openaccess.thecvf.com/content/CVPR2024/html/Huang_PBWR_Parametric-Building-Wireframe_Reconstruction_from_Aerial_LiDAR_Point_Clouds_CVPR_2024_paper.html'><span>PBWR: Parametric-building-wireframe reconstruction from aerial LiDAR point clouds</span></a></p></li><li><p><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html'><span>BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer</span></a></p></li><li><p><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Liu_EdgeDiff_Edge-aware_Diffusion_Network_for_Building_Reconstruction_from_Point_Clouds_CVPR_2025_paper.html'><span>EdgeDiff: Edge-aware Diffusion Network for Building Reconstruction from Point Clouds</span></a></p></li></ol><h3 id='三基于图像的三维线框生成方法'><span>三、基于图像的三维线框生成方法</span></h3><h4 id='31-基于结构光恢复的三维线段检测'><span>3.1 基于结构光恢复的三维线段检测</span></h4><ol><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1077314205000846'><span>Structure-from-motion using lines: Representation, triangulation, and bundle adjustment</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/5539781/'><span>Exploiting global connectivity constraints for reconstruction of 3D line segments from images</span></a></p></li><li><p><a href='https://graz.elsevierpure.com/en/publications/line-based-3d-reconstruction-of-wiry-objects'><span>Line-based 3D reconstruction of wiry objects</span></a></p></li><li><p><a href='https://graz.elsevierpure.com/files/87144577/hofer_bmvc2013.pdf'><span>Incremental Line-based 3D Reconstruction using Geometric Constraints</span></a></p></li><li><p><a href='https://www.researchgate.net/profile/Manuel-Hofer-4/publication/266139858_Semi-Global_3D_Line_Modeling_for_Incremental_Structure-from-Motion/links/54267b020cf238c6ea779465/Semi-Global-3D-Line-Modeling-for-Incremental-Structure-from-Motion.pdf'><span>Semi-Global 3D Line Modeling for Incremental Structure-from-Motion</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/7035867/'><span>Improving sparse 3D models for man-made environments using line-based 3D reconstruction</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S1077314216300236'><span>Efficient 3D scene abstraction using line segments</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2022/html/Wei_ELSR_Efficient_Line_Segment_Reconstruction_With_Planes_and_Points_Guidance_CVPR_2022_paper.html'><span>ELSR: Efficient line segment reconstruction with planes and points guidance</span></a></p></li></ol><h4 id='32-基于多视图立体视觉的三维线段生成'><span>3.2 基于多视图立体视觉的三维线段生成</span></h4><ol><li><p><a href='https://ieeexplore.ieee.org/abstract/document/473228/'><span>Structure and motion from line segments in multiple images</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/991006/'><span>Matching, reconstructing and grouping 3d lines from multiple views using uncertain projective geometry</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/8354204/'><span>Multi-view stereo 3D edge reconstruction</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2021/html/Pautrat_SOLD2_Self-Supervised_Occlusion-Aware_Line_Description_and_Detection_CVPR_2021_paper.html'><span>SOLD2: Self-supervised occlusion-aware line description and detection</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Pautrat_DeepLSD_Line_Segment_Detection_and_Refinement_With_Deep_Image_Gradients_CVPR_2023_paper.html'><span>Deeplsd: Line segment detection and refinement with deep image gradients</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Liu_3D_Line_Mapping_Revisited_CVPR_2023_paper.html'><span>3d line mapping revisited</span></a></p></li><li><p><a href='https://proceedings.neurips.cc/paper_files/paper/2024/hash/35d127a008e3ea420dd1775d1e3ed5b4-Abstract-Conference.html'><span>Mv2cyl: Reconstructing 3d extrusion cylinders from multi-view images</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/5539787/'><span>3D curve sketch: Flexible curve-based stereo reconstruction and calibration</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10943943/'><span>3D Edge Sketch from Multiview Images</span></a></p></li></ol><h4 id='33-基于可微渲染的三维线框生成'><span>3.3 基于可微渲染的三维线框生成</span></h4><ol><li><p><a href='http://openaccess.thecvf.com/content/CVPR2023/html/Ye_NEF_Neural_Edge_Fields_for_3D_Parametric_Curve_Reconstruction_From_CVPR_2023_paper.html'><span>Nef: Neural edge fields for 3d parametric curve reconstruction from multi-view images</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S0926580525001852'><span>3D wireframe model reconstruction of buildings from multi-view images using neural implicit fields</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2024/html/Xue_NEAT_Distilling_3D_Wireframes_from_Neural_Attraction_Fields_CVPR_2024_paper.html'><span>Neat: Distilling 3d wireframes from neural attraction fields</span></a></p></li><li><p><a href='http://openaccess.thecvf.com/content/CVPR2024/html/Li_3D_Neural_Edge_Reconstruction_CVPR_2024_paper.html'><span>3d neural edge reconstruction</span></a></p></li><li><p><a href='https://ieeexplore.ieee.org/abstract/document/10943309/'><span>EdgeGaussians-3D Edge Mapping via Gaussian Splatting</span></a></p></li><li><p><a href='https://arxiv.org/abs/2506.21401'><span>Curve-Aware Gaussian Splatting for 3D Parametric Curve Reconstruction</span></a></p></li><li><p><a href='https://openaccess.thecvf.com/content/CVPR2025/html/Yang_SGCR_Spherical_Gaussians_for_Efficient_3D_Curve_Reconstruction_CVPR_2025_paper.html'><span>SGCR: Spherical Gaussians for Efficient 3D Curve Reconstruction</span></a></p></li></ol></div></div>
+</body>
+</html>
