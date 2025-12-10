@@ -219,8 +219,9 @@
 6. [Detecting vertices of building roofs from ALS point cloud data](https://www.tandfonline.com/doi/abs/10.1080/17538947.2023.2283486)
 7. [Self-Supervised Pretraining Framework for Extracting Global Structures From Building Point Clouds via Completion](https://ieeexplore.ieee.org/abstract/document/10713355/)
 8. [PBWR: Parametric-building-wireframe reconstruction from aerial LiDAR point clouds](https://openaccess.thecvf.com/content/CVPR2024/html/Huang_PBWR_Parametric-Building-Wireframe_Reconstruction_from_Aerial_LiDAR_Point_Clouds_CVPR_2024_paper.html)
-9. [BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html)
-10. [EdgeDiff: Edge-aware Diffusion Network for Building Reconstruction from Point Clouds](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_EdgeDiff_Edge-aware_Diffusion_Network_for_Building_Reconstruction_from_Point_Clouds_CVPR_2025_paper.html)
+9. [RR-Net: 3D Roof Reconstruction from Airborne LiDAR Point Clouds via Edge Segmentation and Wireframe Generation](https://ieeexplore.ieee.org/abstract/document/11218167/)
+10. [BWFormer: Building Wireframe Reconstruction from Airborne LiDAR Point Cloud with Transformer](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BWFormer_Building_Wireframe_Reconstruction_from_Airborne_LiDAR_Point_Cloud_with_CVPR_2025_paper.html)
+11. [EdgeDiff: Edge-aware Diffusion Network for Building Reconstruction from Point Clouds](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_EdgeDiff_Edge-aware_Diffusion_Network_for_Building_Reconstruction_from_Point_Clouds_CVPR_2025_paper.html)
 
 ### 三、基于图像的三维线框生成方法
 
